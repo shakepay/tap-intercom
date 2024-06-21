@@ -713,7 +713,7 @@ class Contacts(IncrementalStream):
     data_key = 'data'
     per_page = MAX_PAGE_SIZE
     # addressable_list_fields = ['tags', 'notes', 'companies']
-    addressable_list_fields = ['tags', 'companies']
+    addressable_list_fields = ['companies']
     to_write_intermediate_bookmark = True
 
     def get_addressable_list(self, contact_list: dict, stream_metadata: dict) -> dict:
