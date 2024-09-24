@@ -766,12 +766,12 @@ class Contacts(IncrementalStream):
                 'value': [{
                     'field': self.replication_key,
                     'operator': '>',
-                    'value': self.dt_to_epoch_seconds(bookmark_datetime)
+                    'value': self.dt_to_epoch_seconds(bookmark_datetime - datetime.timedelta(days=1))
                     },
                     {
                     'field': self.replication_key,
                     'operator': '=',
-                    'value': self.dt_to_epoch_seconds(bookmark_datetime)
+                    'value': self.dt_to_epoch_seconds(bookmark_datetime - datetime.timedelta(days=1))
                     }]
                 },
             'sort': {
